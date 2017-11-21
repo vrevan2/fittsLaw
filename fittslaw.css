@@ -1,0 +1,54 @@
+body {
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+.container {
+    display: table;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    align-items: baseline;
+}
+
+.header * {
+    margin: 10px 5px;
+}
+
+form {
+    display: flex;
+}
+
+#beginTest {
+    width: 100px;
+    height: 30px;
+}
+
+.canvas-wrapper {
+    text-align: center;
+    margin: 20px 0;
+}
+
+canvas {
+    border: thin solid gray;
+}
+
+fieldset {
+    border: none;
+}
+
+table {
+    margin: 0 auto;
+    border: solid thin black;
+}
+
+table > tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+th, td {
+    padding: 5px;
+    text-align: right;
+}

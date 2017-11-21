@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitt's Law | Vivek R. Shivaprabhu</title>
+    <link rel="stylesheet" href="fittslaw.css">
+    <script src="fittslaw.js"></script>
+</head>
+<body onload="init()">
+<div class="container">
+    <div class="header">
+        <h1>Fitt's Law Replication</h1>
+        <h3>by Vivek R. Shivaprabhu</h3>
+    </div>
+    <form>
+        <fieldset>
+            <legend>Number of Targets</legend>
+            <input type="range" min="6" max="30" step="2" value="16" id="targeter" name="targeter"
+                   onchange="document.querySelector('#targets').textContent = value"/>
+            <span id="targets">16</span>
+        </fieldset>
+        <fieldset>
+            <legend>Target Sizes (Radius)</legend>
+            <input type="range" min="10" max="50" step="10" value="30" id="targetSizer1" name="targetSizer1"
+                   onchange="document.querySelector('#targetSize1').textContent = value"/>
+            <span id="targetSize1">30</span>
+            <br/>
+            <input type="range" min="10" max="50" step="10" value="10" id="targetSizer2" name="targetSizer2"
+                   onchange="document.querySelector('#targetSize2').textContent = value"/>
+            <span id="targetSize2">10</span>
+        </fieldset>
+        <fieldset>
+            <legend>Distances</legend>
+            <input type="range" min="50" max="400" step="50" value="250" id="distancer1" name="distancer1"
+                   onchange="document.querySelector('#distance1').textContent = value"/>
+            <span id="distance1">250</span>
+            <br/>
+            <input type="range" min="50" max="400" step="50" value="150" id="distancer2" name="distancer2"
+                   onchange="document.querySelector('#distance2').textContent = value"/>
+            <span id="distance2">150</span>
+            <br/>
+            <input type="range" min="50" max="400" step="50" value="350" id="distancer3" name="distancer3"
+                   onchange="document.querySelector('#distance3').textContent = value"/>
+            <span id="distance3">350</span>
+        </fieldset>
+        <input type="button" value="Begin" id="beginTest" onclick="fittsLaw.begin()"/>
+    </form>
+    <div class="canvas-wrapper">
+        <canvas></canvas>
+    </div>
+    <div class="results">
+        <h2>Results</h2>
+        <div class="results-table">
+
+        </div>
+        <p>
+            ISO 9241-9 establishes uniform guidelines and testing procedures for evaluating computer pointing devices.
+            The metric for comparison is Throughput, in bits per second (bits/s), which includes both the speed and
+            accuracy of users' performance. The equation for throughput is Fitts’ Index of Performance except using
+            an effective index of difficulty (ID). Specifically,
+        </p>
+        <pre>     Throughput = ID / MT      (1)</pre>
+        <p>
+            where MT is the mean movement time, in seconds, for all trials within the same condition, and
+        </p>
+        <pre>     ID = log<sub>2</sub>(D / W + 1)      (2)</pre>
+        <p>
+            ID, in bits, is calculated from D, the distance to the target, and W, the effective width of the target.
+            W is calculated as
+        </p>
+        <pre>     W = 4.133 × SD            (3)</pre>
+        <p>
+            where SD is the standard deviation of the end-point positions using observed end-point scatter data. Using
+            effective width allows throughput to incorporate the spatial variability in human performance. It includes
+            both speed and accuracy [1].
+        </p>
+        <h3>References</h3>
+        <ol>
+            <li>MacKenzie, I.S., Fitts’ law as a research and design tool in human-computer interaction. Human-Computer
+                Interaction 7, 91–139 (1992). http://www.yorku.ca/mack/hci1992.html
+            </li>
+            <li>Soukoreff, R. W., & MacKenzie, I. S. (2004). Towards a standard for pointing device evaluation:
+                Perspectives on 27 years of Fitts' law research in HCI. International Journal of Human-Computer Studies,
+                61, 751-789. http://www.yorku.ca/mack/ijhcs2004.html
+            </li>
+        </ol>
+    </div>
+</div>
+</body>
+</html>
