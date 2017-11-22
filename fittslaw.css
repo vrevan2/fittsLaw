@@ -5,6 +5,7 @@ body {
 
 .container {
     display: table;
+    max-width: 100vh;
     margin: auto;
 }
 
