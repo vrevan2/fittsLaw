@@ -11,3 +11,6 @@ Report
 ------
 [HTML](report.html)  |  [PDF](FittsLawReplication.pdf)
 
+Source
+------
+[GitHub](https://github.com/vrevan2/fittsLaw)
