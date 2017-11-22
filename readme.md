@@ -7,6 +7,10 @@ Application
 -----------
 [Click here](fittslaw.html) to run the application.
 
+Data
+----
+[Excel](FittsLawData.xlsx)
+
 Report
 ------
 [HTML](report.html)  |  [PDF](FittsLawReplication.pdf)
